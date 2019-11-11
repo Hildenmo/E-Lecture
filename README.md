@@ -4,6 +4,6 @@ Webprogrammierung Gruppenaufgabe
 Digitale Bereitstellung von Vorlesungen und Inhalte
 - Upload von Vorlesungsvideos
 - Download von Vorlesungsvideos
-- Stream von Vorlesungsvideos
+- Online ansehen
 - Verschiedene Kurse für Vorlesungen
 - Kommentarfunktion
