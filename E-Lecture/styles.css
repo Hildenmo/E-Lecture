@@ -92,13 +92,9 @@ li {
     grid-area: header;
 }
 
-.picture {
+.inhalt {
     grid-area: main;
     background-color: white;
-}
-
-.main {
-    grid-area: main;
 }
 
 .kurs {
