@@ -16,15 +16,13 @@ public class LoginServlet extends HttpServlet {
 		System.out.println("Username:" + username);
 		System.out.println("Password" + password);
 		
-		if (validUser(username, password)) {
-			resp.setStatus(HttpServletResponse.SC_OK, "User authorized!");
+		if (username != null && password != null) {
+			System.out.println("Username:" + username + "Password" + password);
+			resp.setStatus(resp.SC_OK);
 		} else {
+			System.out.println("No username and Password");
 			resp.sendError(HttpServletResponse.SC_UNAUTHORIZED, "User not authorized!" );
 		}
 	}
 
-	private boolean validUser(String username, String password) {
-		// TODO Auto-generated method stub
-		return false;
-	}
 }
