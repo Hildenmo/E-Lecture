@@ -1,0 +1,108 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        form {
+            border: 3px solid #f1f1f1;
+        }
+
+        input[type=text], input[type=password] {
+            width: 200px;
+            padding: 12px 20px;
+            margin: 8px 0;
+            display: inline-block;
+            border: 1px solid #ccc;
+            box-sizing: border-box;
+        }
+
+        button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 14px 20px;
+            margin: 8px 0;
+            border: none;
+            cursor: pointer;
+            width: 200px;
+        }
+
+            button:hover {
+                opacity: 0.8;
+            }
+
+        .cancelbtn {
+            width: auto;
+            padding: 10px 18px;
+            background-color: #f44336;
+        }
+
+        .imgcontainer {
+            text-align: center;
+            margin: 24px 0 12px 0;
+        }
+
+        .container {
+            padding: 16px;
+        }
+
+        span.psw {
+            float: right;
+            padding-top: 16px;
+        }
+
+        /* Change styles for span and cancel button on extra small screens */
+        @media screen and (max-width: 300px) {
+            span.psw {
+                display: block;
+                float: none;
+            }
+
+            .cancelbtn {
+                width: 50px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div style="float: left; width: 100px; height: 50px; padding-left: 20px;">
+        <img title="" src="https://cdn4.iconfinder.com/data/icons/e-learning-2-4/66/109-512.png" alt="" height="100" />
+    </div>
+    <br />
+    <h2>E-Lecture</h2>
+    <br />
+    <h2>Login</h2>
+
+    <div class="container">
+        <div class="row">
+            <label for="uname"><b>Username</b></label>
+            <input type="text" placeholder="Enter Username" name="uname" required>
+        </div>
+
+        <div class="row">
+            <label for="psw"><b>Password</b></label>
+            <input type="password" placeholder="Enter Password" name="psw" required>
+        </div>
+
+        <button id="submit" type="submit" onclick="submitFunction()">Login</button>
+
+        <label>
+            <input type="checkbox" checked="checked" name="remember"> Remember me
+        </label>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <button type="button" class="cancelbtn">Cancel</button>
+            <a href="#forgot.html">Passwort vergessen?</a>
+        </div>
+    </div>
+    
+    <script type="text/javascript"	src="loginscript.js"></script>
+</body>
+
+</html >
