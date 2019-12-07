@@ -1,5 +1,13 @@
 xampp
 https://www.apachefriends.org/de/index.html
 
+xampp control panel:
+Apache und mysql starten
+
+Unsere Dateien in htdocs und dann im browser:
+http://localhost/index.html
+Für Datenbank
+http://localhost/phpmyadmin/
+
 node js
 https://nodejs.org/de/download/
