@@ -1,0 +1,5 @@
+xampp
+https://www.apachefriends.org/de/index.html
+
+node js
+https://nodejs.org/de/download/
