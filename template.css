@@ -1,0 +1,33 @@
+body {
+    background-image: url(background2.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.navbar {
+    margin-bottom: 0;
+    border-radius: 0;
+  }
+
+footer {
+background-color: #000000;
+padding: 25px;
+}
+
+.container-fluid.text-center.content {
+    max-width: 80%;
+    background-color: rgb(226, 226, 226);
+    min-height: 650px;
+}
+
+.container-fluid.text-center.login {
+    align-items: center;
+    width: 30%;
+    background-color: rgb(75, 75, 75);
+    position: absolute;
+    margin: 0;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
