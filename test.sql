@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Erstellungszeit: 12. Dez 2019 um 14:30
+-- Erstellungszeit: 12. Dez 2019 um 17:08
 -- Server-Version: 10.4.10-MariaDB
 -- PHP-Version: 7.3.12
 
@@ -59,18 +59,19 @@ CREATE TABLE `nutzer` (
   `email` varchar(255) NOT NULL,
   `vorname` varchar(255) DEFAULT NULL,
   `nachname` varchar(255) DEFAULT NULL,
-  `kuerzel_sg` varchar(3) DEFAULT NULL
+  `kuerzel_sg` varchar(3) DEFAULT NULL,
+  `bild` varchar(255) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1 COMMENT='Nutzertabelle';
 
 --
 -- Daten für Tabelle `nutzer`
 --
 
-INSERT INTO `nutzer` (`id`, `benutzername`, `passwort`, `email`, `vorname`, `nachname`, `kuerzel_sg`) VALUES
-(8, 'MaxMustermann', '$2y$10$Xqh6H3gb0T60RWwxSbqqru9C6UOpg4DWC5gjWAht9k.Pfcz1j3wre', 'max@test.de', 'Max', 'Mustermann', 'WWI'),
-(9, 'Moritz', '$2y$10$1bHu2hYlfvf2b9D9H8lROO8jjMtToELgCe087Bon/Y1k0MXHa3u3i', 'moritz@test.de', 'Moritz', 'Lang', 'WWI'),
-(10, 'Lukas', '$2y$10$uIs.BJxj5MSa3hCcpfQUx.rYmmsaeJ6Z.wiERV9cgEK9mIsLvElt6', 'lukas@test.de', 'Lukas', 'Beuscher', 'WWI'),
-(11, 'Marco', '$2y$10$DJxqtQfN.OEy/OIoHlctb.XqnTBU.cAZ/cKzZAtvBUXM4V9u3MFI.', 'marco@test.de', 'Marco', 'Hildenbrand', 'WWI');
+INSERT INTO `nutzer` (`id`, `benutzername`, `passwort`, `email`, `vorname`, `nachname`, `kuerzel_sg`, `bild`) VALUES
+(8, 'MaxMustermann', '$2y$10$Xqh6H3gb0T60RWwxSbqqru9C6UOpg4DWC5gjWAht9k.Pfcz1j3wre', 'max@test.de', 'Max', 'Mustermann', 'WWI', 'https://images-na.ssl-images-amazon.com/images/I/51H4DWAOYwL._SL1024_.jpg'),
+(9, 'Moritz', '$2y$10$1bHu2hYlfvf2b9D9H8lROO8jjMtToELgCe087Bon/Y1k0MXHa3u3i', 'moritz@test.de', 'Moritz', 'Lang', 'WWI', 'https://i.ebayimg.com/images/g/BugAAOSwEcxc~N~-/s-l300.jpg'),
+(10, 'Lukas', '$2y$10$uIs.BJxj5MSa3hCcpfQUx.rYmmsaeJ6Z.wiERV9cgEK9mIsLvElt6', 'lukas@test.de', 'Lukas', 'Beuscher', 'WWI', 'https://www.wochenblatt.net/fileadmin/_processed_/1/f/csm_180423-si_Radballer_Meister_6ef8e7cfb6.jpg'),
+(11, 'Marco', '$2y$10$DJxqtQfN.OEy/OIoHlctb.XqnTBU.cAZ/cKzZAtvBUXM4V9u3MFI.', 'marco@test.de', 'Marco', 'Hildenbrand', 'WWI', 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR8bAkopZie8OTjvntkTo2bhTiS00gr7NK-pC-x1Oc3VTRMuS4O&s');
 
 -- --------------------------------------------------------
 
@@ -88,6 +89,7 @@ CREATE TABLE `studiengang` (
 --
 
 INSERT INTO `studiengang` (`kuerzel`, `beschreibung`) VALUES
+('INF', 'Informatik'),
 ('WWI', 'Wirtschaftsinformatik');
 
 -- --------------------------------------------------------
