@@ -42,7 +42,6 @@
 			
              
             <?php
-                session_start();
                 require_once('konfiguration.php');
 
                 $statement3 = $pdo->prepare("SELECT * FROM kurse ORDER BY beschreibung");
