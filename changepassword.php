@@ -53,7 +53,7 @@ if(isset($_GET['change'])) {
    
     if ($user !== false && password_verify($altespasswort, $user['passwort'])) {
         //$_SESSION['userid'] = $user['Benutzername'];
-        echo 'Altes Passwort richtig.';
+        
 
         if(!$error) {    
             $passwort_hash = password_hash($passwort2, PASSWORD_DEFAULT);
@@ -65,34 +65,43 @@ if(isset($_GET['change'])) {
             
 
             if($result) {        
-                echo 'Passwort wurde geändert. <a href="login.php">Zum Login</a>';
-                echo('Login erfolgreich. Weiter zu <a href="secret.php">internen Bereich</a>');
+                $errorMessage= 'Passwort wurde geändert.<br> <a href="logout.php">Zum Login</a>';
+                //echo('Login erfolgreich. Weiter zu <a href="secret.php">internen Bereich</a>');
+              //  header("Location: login.php");
                 $showFormular = false;
             } else {
-                echo 'Beim Abspeichern ist leider ein Fehler aufgetreten<br>';
+                $errorMessage = 'Beim Abspeichern ist leider ein Fehler aufgetreten<br>';
             }
         } 
 
 
     } else {
         $error = true;
-        $errorMessage = "Benutzername oder Passwort war ungültig<br>";
+        $errorMessage = "Benutzername oder Passwort ungültig<br>";
     }
     
 } 
 ?>
 
 
+
+
+<div class="container-fluid text-center loginscreen">
+
+<img title="" src="https://cdn4.iconfinder.com/data/icons/e-learning-2-4/66/109-512.png" alt="" height="100" />
+<h1 style="display:inline; color: black"><b>E-Lecture</b></h1>
+
+<?php 
+          if(isset($errorMessage)) {
+          echo $errorMessage;
+          }
+?>
 <?php 
 
 if($showFormular){
 
 
 ?>
-
-<div class="container-fluid text-center loginscreen">
-
-
 <form action="?change=1" method="post">
 
 <div class="input-group input-group-lg">

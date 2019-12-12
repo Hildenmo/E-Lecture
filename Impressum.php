@@ -11,6 +11,15 @@
   <link rel="stylesheet" href="template.css">
 </head>
 
+<?php
+    session_start();
+    // Testet, ob User eingeloggt ist
+    if(!isset($_SESSION['userid'])) {
+      header("Location: login.php");
+
+    }
+?>
+
 <body>
   <nav class="navbar navbar-inverse" id="nav">
     <div class="container-fluid">
