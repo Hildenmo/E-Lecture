@@ -99,7 +99,7 @@
       <a style="color: rgb(126, 126, 126);">&copy; E-Lecture</a>
     </div>
     <div class="col-md-4">
-      <a style="color: rgb(126, 126, 126)" id="impressum_link" href="impressum.html">Impressum</a>
+      <a style="color: rgb(126, 126, 126)" id="impressum_link" href="impressum.php">Impressum</a>
     </div>
     <div class="col-md-4">
       <img title="" src="logo_facebook.png" alt="" height="30px" />
@@ -108,7 +108,6 @@
     </div>
   </footer>
 
-  <script src="script.js"></script>
 </body>
 
 </html>
