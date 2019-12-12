@@ -50,7 +50,7 @@
           </li>
         </ul>
         <form class="navbar-form navbar-right">
-          <a href="#" id="logout"><img title="" src="logout2.png" alt="" height="30px" /></a>
+          <a href="logout.php" id="logout"><img title="" src="logout2.png" alt="" height="30px" /></a>
         </form>
       </div>
     </div>
