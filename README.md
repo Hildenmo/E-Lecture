@@ -27,7 +27,7 @@ Das folgende muss vor Ausführung eingestellt werden:
 1. Xampp downloaden
 2. Xampp installieren 
 3. Apache in Xampp starten
-4- MYSQL in Xampp starten mit Localhost Port 3306, username root und Passwort leer
+4. MYSQL in Xampp starten mit Localhost Port 3306, username root und Passwort leer
 
 Installation:
 1. Repository downloaden
