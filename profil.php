@@ -17,6 +17,13 @@
       header("Location: login.php");
 
     }
+    require_once('konfiguration.php');
+
+    $user = $_SESSION['userid'];
+
+    $statement = $pdo->prepare("SELECT * FROM nutzer inner join studiengang on kuerzel_sg = kuerzel where benutzername= :user");
+    $result = $statement->execute(array('user' => $user));
+    $row = $statement->fetch();
 ?>
 <body>
   <nav class="navbar navbar-inverse" id="nav">
@@ -61,28 +68,52 @@
       <div class="container-fluid bg-3 text-center">
         <h2>Mein Profil</h2>
         <div class="row">
-          <div class="col-sm-4">
+          <div class="col-sm-6">
 
             <div class="card">
               <img src="https://upload.wikimedia.org/wikipedia/commons/e/ef/Profilbild_19_12_2015.jpg" alt="Profil"
                 style="width:100%">
-              <h1>Lukas Beuscher</h1>
+                <?php
+              echo '<h1>'.$row['vorname'].' '.$row['nachname'].'</h1>'
+              
+              ?>
               <p class="title">Persönlicher Text</p>
               <p>DHBW Ravensburg</p>
               <p><button>Profilbild ändern</button></p>
             </div>
           </div>
-          <div class="col-sm-4">
-            <h3>Meine Kurse</h3>
-            <p>Datenbankabfrage Kurs 1</p>
-            <p>Datenbankabfrage Kurs 2</p>
-            <p>Datenbankabfrage Kurs 3</p>
-          </div>
-          <div class="col-sm-4">
+       
+          <div class="col-sm-6">
             <h3>Persönliche Daten</h3>
-            <p>Nutzername: Datenbankabfrage Username</p>
-            <p>Passwort: Datenbankabfrage Passwort</p>
 
+            <table style="text-align: left"> 
+              <?php
+                echo '<tr>';
+                echo '<td style="width: 500px"><b>Benutzername:</b><td>';
+                echo '<td>'.$row['benutzername'].'</td>';
+                echo '</tr>';
+            
+                echo '<tr>';
+                echo '<td><b>E-Mail:</b><td>';
+                echo '<td>'.$row['email'].'</td>';
+                echo '</tr>';
+
+                echo '<tr>';
+                echo '<td><b>Studiengang:</b><td>';
+                echo '<td>'.$row['beschreibung'].'</td>';
+                echo '</tr>';
+
+            ?>
+          </table>
+          <h3>Meine Kurse</h3>
+          
+          <?php
+
+          ?>        
+          <p>Datenbankabfrage Kurs 1</p>
+          <p>Datenbankabfrage Kurs 2</p>
+          <p>Datenbankabfrage Kurs 3</p>
+           
           </div>
         </div>
       </div>
