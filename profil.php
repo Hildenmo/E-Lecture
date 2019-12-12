@@ -70,10 +70,10 @@
           <div class="col-sm-6">
 
             <div class="card">
-              <img src="https://upload.wikimedia.org/wikipedia/commons/e/ef/Profilbild_19_12_2015.jpg" alt="Profil"
-                style="width:100%">
-                <?php
-              echo '<h1>'.$row['vorname'].' '.$row['nachname'].'</h1>'
+              <?php
+              
+              echo '<img src="'.$row['bild'].'" alt="Profil"style="width:100%">';
+              echo '<h1>'.$row['vorname'].' '.$row['nachname'].'</h1>';
               
               ?>
               <p class="title">Persönlicher Text</p>
