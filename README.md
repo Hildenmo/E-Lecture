@@ -11,8 +11,8 @@ Aufgaben der Plattform wären:
 - Download von Vorlesungsvideos
 - Online ansehen
 - Verschiedene Kurse für Vorlesungen
-- verschiedene Benutzer
-- bearbeitung Profil
+- Login / Logout für verschiedene Benutzer
+- Passwort ändern
 
 
 ### Technologien
