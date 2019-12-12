@@ -39,8 +39,8 @@ Das folgende muss vor Ausführung eingestellt werden:
 5. Die Datei 'test.sql' aus dem Repository importieren
 6. Zum Starten der Webanwendung 'http://localhost/login.php' im Browser eingeben
 7. Zum Login folgenden Benutzer nutzen:
-    Benutzername: maxmustermann
-    Passwort: test
+    * Benutzername: maxmustermann
+    * Passwort: test
 
 
 
