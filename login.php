@@ -49,7 +49,7 @@ if(isset($_GET['login'])) {
   <div class="container-fluid text-center loginscreen">
     <br>
     <img title="" src="https://cdn4.iconfinder.com/data/icons/e-learning-2-4/66/109-512.png" alt="" height="100" />
-    <h1 style="display:inline; color: black">E-Lecture</h1>
+    <h1 style="display:inline; color: black"><b>E-Lecture</b></h1>
       <div class="login">
         <div class="heading">
           <br>
