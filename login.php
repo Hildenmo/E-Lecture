@@ -18,7 +18,7 @@ if(isset($_GET['login'])) {
 
         //die('Login erfolgreich. Weiter zu <a href="home.php">internen Bereich</a>');
     } else {
-        $errorMessage = "Benutzername oder Passwort war ungültig<br>";
+        $errorMessage = "Benutzername oder Passwort ungültig<br>";
     }
     
 } 
