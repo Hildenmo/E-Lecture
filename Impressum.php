@@ -24,8 +24,8 @@
       </div>
       <div class="collapse navbar-collapse" id="myNavbar">
         <ul class="nav navbar-nav">
-          <li id="nav_home"><a href="home.html">Home</a></li>
-          <li id="nav_profil"><a href="profil.html">Profil</a></li>
+          <li id="nav_home"><a href="home.php">Home</a></li>
+          <li id="nav_profil"><a href="profil.php">Profil</a></li>
         
 		<li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown">Meine Kurse<span
                 class="caret"></span></a>
