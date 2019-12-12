@@ -41,7 +41,7 @@ if(isset($_GET['change'])) {
     $passwort2 = $_POST['passwort2'];
 
     if($passwort != $passwort2) {
-        echo 'Die Passwörter müssen übereinstimmen<br>';
+        $errorMessage= 'Die Passwörter müssen übereinstimmen<br>';
         $error = true;
     }
     
