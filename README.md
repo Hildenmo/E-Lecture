@@ -38,9 +38,9 @@ Das folgende muss vor Ausführung eingestellt werden:
 4. Auf die Datenbank "test" klicken und in der Menüleiste "Importieren" wählen
 5. Die Datei 'test.sql' aus dem Repository importieren
 6. Zum Starten der Webanwendung 'http://localhost/login.php' im Browser eingeben
-7. Zum Login folgenden Benutzer nutzen
-* Benutzername: maxmustermann
-* Passwort: test
+7. Zum Login folgenden Benutzer nutzen:
+    Benutzername: maxmustermann
+    Passwort: test
 
 
 
