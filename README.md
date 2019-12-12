@@ -4,9 +4,9 @@ Webprogrammierung Gruppenaufgabe
 ## Dokumentation
 Mit dieser Webanwendung sollen die Grundkonzepte der Vorlesung Webprogrammierung dargestellt werden.
 
-Unsere Idee war die Digitale Bereitstellung von Vorlesungen als Video auf einer Onlineplattform.
+Unsere Idee für eine Webanwendung war die digitale Bereitstellung von Vorlesungen als Videoaufzeichnung auf einer Onlineplattform.
 
-Aufagben der Plattform wären:
+Aufgaben der Plattform wären:
 - Upload von Vorlesungsvideos
 - Download von Vorlesungsvideos
 - Online ansehen
