@@ -20,6 +20,17 @@ padding: 25px;
     min-height: 650px;
 }
 
+.container-fluid.text-center.loginscreen {
+  max-width: 30%;
+  background-color: rgb(126, 122, 122);
+  min-height: 350px;
+  top: 50%;
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+
 .container-fluid.text-center.login {
     align-items: center;
     width: 30%;
@@ -55,6 +66,7 @@ padding: 25px;
     cursor: pointer;
     width: 100%;
     font-size: 18px;
+    margin-bottom: 25px;
   }
   
   a {
