@@ -15,15 +15,13 @@
     // Testet, ob User eingeloggt ist
     if(!isset($_SESSION['userid'])) {
       header("Location: login.php");
-
     }
     require_once('konfiguration.php');
-
     $user = $_SESSION['userid'];
-
     $statement = $pdo->prepare("SELECT * FROM nutzer inner join studiengang on kuerzel_sg = kuerzel where benutzername= :user");
     $result = $statement->execute(array('user' => $user));
     $row = $statement->fetch();
+    
 ?>
 <body>
   <nav class="navbar navbar-inverse" id="nav">
@@ -46,16 +44,17 @@
             <?php
              
              require_once('konfiguration.php');
-
              $statement3 = $pdo->prepare("SELECT * FROM kurse ORDER BY beschreibung");
              $result3 = $statement3->execute();
              
              while($row3 = $statement3->fetch()) {
                  echo '<li><a href="home.php#'.$row3['beschreibung'].'">'.$row3['beschreibung'].'</a></li>';
              }
-         ?>            </ul>
+         ?>            
+         </ul>
           </li>
         </ul>
+        
         <form class="navbar-form navbar-right">
           <a href="logout.php" id="logout"><img title="" src="logout2.png" alt="" height="30px" /></a>
         </form>
@@ -85,6 +84,7 @@
        
           <div class="col-sm-6">
             <h3>Persönliche Daten</h3>
+          
 
             <table style="text-align: left"> 
               <?php
@@ -97,23 +97,22 @@
                 echo '<td><b>E-Mail:</b><td>';
                 echo '<td>'.$row['email'].'</td>';
                 echo '</tr>';
-
                 echo '<tr>';
                 echo '<td><b>Studiengang:</b><td>';
                 echo '<td>'.$row['beschreibung'].'</td>';
                 echo '</tr>';
-
             ?>
           </table>
           <h3>Meine Kurse</h3>
           
           <?php
-
+          $statement3 = $pdo->prepare("SELECT * FROM kurse ORDER BY beschreibung");
+          $result3 = $statement3->execute();
+           while($row3 = $statement3->fetch()) {
+            echo '<p>'.$row3['beschreibung'].'</p>';
+        }
           ?>        
-          <p>Datenbankabfrage Kurs 1</p>
-          <p>Datenbankabfrage Kurs 2</p>
-          <p>Datenbankabfrage Kurs 3</p>
-           
+          
           </div>
         </div>
       </div>
@@ -125,7 +124,7 @@
       <a style="color: rgb(126, 126, 126);">&copy; E-Lecture</a>
     </div>
     <div class="col-md-4">
-      <a style="color: rgb(126, 126, 126)" id="impressum_link" href="impressum.html">Impressum</a>
+      <a style="color: rgb(126, 126, 126)" id="impressum_link" href="impressum.php">Impressum</a>
     </div>
     <div class="col-md-4">
       <img title="" src="logo_facebook.png" alt="" height="30px" />
@@ -134,7 +133,7 @@
     </div>
   </footer>
 
- 
+
 </body>
 
 
