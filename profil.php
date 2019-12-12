@@ -78,7 +78,9 @@
               ?>
               <p class="title">Persönlicher Text</p>
               <p>DHBW Ravensburg</p>
-              <p><button>Profilbild ändern</button></p>
+               <form action="changepassword.php">
+              <button input type="submit" value="Passwort ändern">Passwort ändern</button>
+              </form>
             </div>
           </div>
        
