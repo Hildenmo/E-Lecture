@@ -10,7 +10,7 @@ session_start();
 // Verbindung zur Datenbank
 require_once('konfiguration.php');
 
-$showFormular = true; //Variable ob das Registrierungsformular anezeigt werden soll
+$showFormular = true; //Variable ob Eingabefelder anezeigt werden sollen
 
 ?>
 <!DOCTYPE html> 
@@ -66,8 +66,7 @@ if(isset($_GET['change'])) {
 
             if($result) {        
                 $errorMessage= 'Passwort wurde geändert.<br> <a href="logout.php">Zum Login</a>';
-                //echo('Login erfolgreich. Weiter zu <a href="secret.php">internen Bereich</a>');
-              //  header("Location: login.php");
+              
                 $showFormular = false;
             } else {
                 $errorMessage = 'Beim Abspeichern ist leider ein Fehler aufgetreten<br>';
